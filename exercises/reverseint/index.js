@@ -15,9 +15,13 @@ function reverseInt(n) {
     return parseInt(reversed);
   } else {
     const reversed = n.toString().split('').slice(1).reverse().join('');
-    return -reversed;
+    return -parseInt(reversed);
   }
-
 }
 
+// THEIR SOLUTION #1
+function reverseInt(n) {
+  const reversed = n.toString().split('').reverse().join('');
+  return parseInt(reversed) * Math.sign(n);
+}
 module.exports = reverseInt;

@@ -6,6 +6,8 @@
 //   reverse('hello') === 'olleh'
 //   reverse('Greetings!') === '!sgniteerG'
 
-function reverse(str) {}
+function reverse(str) {
+  TEST TEST
+}
 
 module.exports = reverse;

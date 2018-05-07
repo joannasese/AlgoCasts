@@ -17,7 +17,7 @@ function capitalize(str) {
   return capitalized.join(' ');
 }
 
-// THEIR SOLUTION
+// THEIR SOLUTION #1
 function capitalize(str) {
   const words = [];
 
@@ -26,4 +26,5 @@ function capitalize(str) {
   }
   return words.join(' ');
 }
+
 module.exports = capitalize;

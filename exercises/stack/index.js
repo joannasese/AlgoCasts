@@ -19,8 +19,8 @@ class Stack {
     return this.data.push(record);
   }
 
-  pop(record) {
-    return this.data.pop(record);
+  pop() {
+    return this.data.pop();
   }
 
   peek(record) {

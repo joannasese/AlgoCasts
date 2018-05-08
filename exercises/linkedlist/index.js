@@ -19,6 +19,17 @@ class LinkedList {
     // where this.head refers to next!
     // we don't want to overwrite
   }
+
+  size(){
+    let counter = 0;
+    let node = this.head;
+
+    while (node) {
+      counter++;
+      node = node.next;
+    }
+    return counter;
+  }
 }
 
 module.exports = { Node, LinkedList };

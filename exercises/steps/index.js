@@ -48,5 +48,4 @@ function steps(n) {
     console.log(stair);
   }
 }
-
 module.exports = steps;

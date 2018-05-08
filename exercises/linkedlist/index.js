@@ -20,15 +20,24 @@ class LinkedList {
     // we don't want to overwrite
   }
 
-  size(){
+  size() {
     let counter = 0;
     let node = this.head;
 
     while (node) {
       counter++;
       node = node.next;
+      // node = node.next so that we evaluate only if node !== null;
     }
     return counter;
+  }
+
+  getFirst() {
+    while (this.head){
+      return this.head;
+      //this.head will always be pointing to first node;
+    }
+
   }
 }
 

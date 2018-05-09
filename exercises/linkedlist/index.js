@@ -37,7 +37,19 @@ class LinkedList {
       return this.head;
       //this.head will always be pointing to first node;
     }
+  }
 
+  getLast() {
+    if (!this.head){
+      return null;
+    }
+
+    while (this.head){
+      if (!this.head.next){
+        return this.head;
+      }
+      this.head = this.head.next;
+    }
   }
 }
 

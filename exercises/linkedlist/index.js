@@ -43,27 +43,46 @@ class LinkedList {
     if (!this.head){
       return null;
     }
-
-    while (this.head){
-      if (!this.head.next){
-        return this.head;
+    let node = this.head
+    while (node){
+      if (!node.next){
+        return node;
       }
-      this.head = this.head.next;
+      node = node.next;
     }
   }
 
-clear() {
-  // if (!this.head){
-  //   return null;
-  // }
-  this.head = '';
-  // while (this.head){
-  //   if (!this.head.next){
-  //     return this.head;
-  //   }
-  //   this.head = '';
-  // }
-}
+  clear() {
+    this.head = null;
+  }
+
+  removeFirst() {
+    if (!this.head){
+      return;
+    }
+    this.head = this.head.next;
+  }
+
+  removeLast() {
+
+    if (!this.head) {
+      return;
+    }
+
+    if (!this.head.next){
+      this.clear();
+      return;
+    }
+
+    let previous = this.head;
+    let node = this.head.next;
+
+    while (node.next) {
+      previous = node;
+      node = node.next;
+    }
+    previous.next = null;
+  }
 
 }
 

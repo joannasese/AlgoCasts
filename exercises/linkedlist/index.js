@@ -92,7 +92,22 @@ class LinkedList {
     } else {
       this.head = new Node(data);
     }
+  }
 
+  getAt(num) {
+    if (!this.head) {
+      return null;
+    }
+
+    let counter = 0;
+    let node = this.head;
+    while (node) {
+      if (counter === num) {
+        return node;
+      }
+      counter++;
+      node = node.next;
+    }
   }
 
 }

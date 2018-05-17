@@ -95,10 +95,6 @@ class LinkedList {
   }
 
   getAt(num) {
-    if (!this.head) {
-      return null;
-    }
-
     let counter = 0;
     let node = this.head;
     while (node) {
@@ -108,10 +104,24 @@ class LinkedList {
       counter++;
       node = node.next;
     }
+    return null;
   }
 
   removeAt(num) {
-    
+    if (!this.head) {
+      return null;
+    }
+
+    let counter = 0;
+    let node = this.head;
+    while (node) {
+      if (counter === num) {
+        return node = null;
+      }
+      counter++;
+      node = node.next;
+    }
+    return null;
   }
 
 }

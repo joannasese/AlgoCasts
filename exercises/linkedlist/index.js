@@ -139,6 +139,18 @@ class LinkedList {
       node = node.next
     }
     return this.insertFirst(data);
+  }
+
+  insertAt(data, index) {
+    if (!this.head) {
+      return this.insertFirst(data);
+    }
+    if (index === 0) {
+      return this.insertFirst(data);
+    }
+    const previous = this.getAt(index-1) || this.getLast();
+    const node = new Node(data, previous.next);
+    previous.next = node;
 
   }
 

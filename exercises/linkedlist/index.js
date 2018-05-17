@@ -125,7 +125,20 @@ class LinkedList {
     // this is confusing
   }
 
-  insertAt(num){
+  insertAt(data, index){
+    let counter = 0;
+    let node = this.head;
+    if (node) {
+      if (counter === index) {
+        node = this.getAt(index)
+        return;
+      } else {
+        return this.insertLast(data);
+      }
+      counter++;
+      node = node.next
+    }
+    return this.insertFirst(data);
 
   }
 

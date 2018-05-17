@@ -112,7 +112,7 @@ class LinkedList {
       return;
     }
 
-    if (index === 0) {
+    if (num === 0) {
       this.head = this.head.next;
       return;
     }
@@ -124,6 +124,11 @@ class LinkedList {
     previous.next = previous.next.next;
     // this is confusing
   }
+
+  insertAt(num){
+
+  }
+
 }
 
 module.exports = { Node, LinkedList };

@@ -109,21 +109,21 @@ class LinkedList {
 
   removeAt(num) {
     if (!this.head) {
-      return null;
+      return;
     }
 
-    let counter = 0;
-    let node = this.head;
-    while (node) {
-      if (counter === num) {
-        return node = null;
-      }
-      counter++;
-      node = node.next;
+    if (index === 0) {
+      this.head = this.head.next;
+      return;
     }
-    return null;
+
+    const previous = this.getAt(num-1);
+    if (!previous || !previous.next) {
+      return;
+    }
+    previous.next = previous.next.next;
+    // this is confusing
   }
-
 }
 
 module.exports = { Node, LinkedList };

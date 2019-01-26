@@ -41,6 +41,9 @@ function reverse(str) {
 // solution 3
 function reverse(str) {
   let arr = str.split('');
+  // reduce takes two arguments: arrow function and initial value
+  // when reduce runs, it takes initial value and passes it in function as starting argument
+  // char is element in array that we are operating on
   return arr.reduce((reversed, char) => char + reversed, '');
 }
 

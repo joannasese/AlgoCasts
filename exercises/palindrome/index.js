@@ -18,4 +18,13 @@ function palindrome(str) {
   return str === reversed;
 }
 
+// solution 1
+// same as my solution
+
+// solution 2
+function palindrome(str) {
+  // str = 'bats' indices 0, 1, 2, 3
+  return str.split('').every((char, i) => char === str[str.length - i - 1]);
+}
+
 module.exports = palindrome;

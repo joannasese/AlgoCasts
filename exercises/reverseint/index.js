@@ -11,12 +11,15 @@
 // my solution
 function reverseInt(n) {
   if (n < 0){
-    return -parseInt((Math.sign(n)*n).toString().split('').reverse().join(''))
-  } else if (n === 0){
-    return 0
+    return -parseInt(n.toString().split('').reverse().join(''));
   } else {
     return parseInt(n.toString().split('').reverse().join(''));
   }
 }
 
+// solution 1
+// function reverseInt(n) {
+//   const reversed = n.toString().split('').reverse().join('');
+//   return n < 0 ? -parseInt(reversed) : parseInt(reversed);
+// }
 module.exports = reverseInt;

@@ -18,8 +18,8 @@ function reverseInt(n) {
 }
 
 // solution 1
-// function reverseInt(n) {
-//   const reversed = n.toString().split('').reverse().join('');
-//   return n < 0 ? -parseInt(reversed) : parseInt(reversed);
-// }
+function reverseInt(n) {
+  const reversed = n.toString().split('').reverse().join('');
+  return n < 0 ? -parseInt(reversed) : parseInt(reversed);
+}
 module.exports = reverseInt;

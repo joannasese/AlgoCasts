@@ -25,7 +25,9 @@ function fizzBuzz(n) {
       console.log(i)
     }
   }
-
 }
+
+// solution 1
+// same as my solution
 
 module.exports = fizzBuzz;
